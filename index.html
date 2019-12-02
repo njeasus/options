@@ -1,0 +1,451 @@
+<!DOCTYPE HTML>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US" class="ie ie6 lt-ie9">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US" class="ie ie7 lt-ie9">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US" class="ie ie8 lt-ie9">
+<![endif]-->
+<!--[if gte IE 9]>
+<html lang="en-US" class="ie ie9">
+<![endif]-->
+<!--[if !(IE)]><!-->
+<html lang="en-US" class="">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0 minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="author" content="marcolago">
+
+	<meta property="og:title" content="Flowtime.js A HTML Presentation Framework">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://marcolago.github.io/flowtime.js/">
+	<meta property="og:image" content="http://marcolago.github.io/flowtime.js/assets/img/share-image.jpg">
+	<meta property="og:site_name" content="Flowtime.js">
+	<meta property="fb:admins" content="1293500397">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:url" content="https://marcolago.github.io/flowtime.js/">
+	<meta name="twitter:title" content="Flowtime.js - A HTML Presentation Framework">
+	<meta name="twitter:description" content="Flowtime.js is an open source framework for easily build HTML presentations or websites. It’s built with web standards in mind and on top of a solid full page grid layout powered by CSS3 hardware accelerated transition and comes with a complete set of Javascript API for deep customization.">
+	<meta name="twitter:image" content="http://marcolago.github.io/flowtime.js/assets/img/share-image.jpg">
+	<meta name="twitter:creator" content="@marcolago">
+
+	<meta name="description" content="Flowtime.js is an open source framework for easily build HTML presentations or websites. It’s built with web standards in mind and on top of a solid full page grid layout powered by CSS3 hardware accelerated transition and comes with a complete set of Javascript API for deep customization.">
+
+	<title>Flowtime.js</title>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="css/flowtime.css">
+	<link rel="stylesheet" href="css/themes/default.css">
+	<link rel="stylesheet" href="assets/css/prism.css">
+
+
+	<link rel="apple-touch-icon-precomposed" 						href="img/touch-icon-iphone.png">
+	<link rel="apple-touch-icon-precomposed" 	sizes="72x72" 		href="img/touch-icon-ipad.png">
+	<link rel="apple-touch-icon-precomposed" 	sizes="114x114" 	href="img/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon-precomposed" 	sizes="144x144" 	href="img/touch-icon-ipad-retina.png">
+
+	<link rel="apple-touch-startup-image" href="img/startup-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
+	<link rel="apple-touch-startup-image" href="img/startup-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
+
+</head>
+<body class="">
+
+	<div class="flowtime">
+		<div class="ft-section" data-id="section-1">
+			<div id="/section-1/page-1" class="ft-page" data-id="page-1" data-title="Options: An introduction">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<p class="page-title">Options: An introduction</p>
+						<img src="img/wsb.png">
+					</div>
+				</div>
+			</div>
+			<div id="/section-1/page-2" class="ft-page" data-id="page-2">
+				<h1>Things we'll cover today</h1>
+				<p>What is an option?</p>
+				<p>Basic properties</p>
+				<p>Pay-off scenarios</p>
+				<p>Greeks</p>
+				<p>Option trading strategies</p>
+				<p>The Black-Sholes-Merton model</p>
+				<p>Volatility arbitrage</p>
+			</div>
+                </div>
+		<div class="ft-section" data-id="section-2">
+			<div id="/section-2/page-1" class="ft-page" data-id="page-1">
+				<h1>What is an option?</h1>
+				<p class="ft-fragment step">It's a contract between two parties so that the investor has the option to sell or buy a security in the future for a predefined price</p>
+				<p class="ft-fragment step">The underlier can be any security: <strong>stocks</strong>, indeces, currencies, commodities, swaps, futures, etc. </p>
+				<p class="ft-fragment step">Exchange-traded vs OTC</p>
+				<p class="ft-fragment step">Exchange-traded: standardised contracts</p>
+				<p class="ft-fragment step">Types: put (right to sell) or call (right to buy)</p>
+				<p class="ft-fragment step">Exercise an option: execute the right</p>
+				<p class="ft-fragment step">Write an option: sell the contractual right to someone</p>
+			</div>
+			<div id="/section-2/page-2" class="ft-page" data-id="page-2">
+				<h1>Properties</h1>
+				<p class="ft-fragment step">Type: put or call</p>
+				<p class="ft-fragment step">Maturity/expiry: when it can be excercised</p>
+				<p class="ft-fragment step">Strike price: for how much (vs: spot price: the current price)</p>
+				<p class="ft-fragment step">Premium: the (upfront) price of the option</p>
+				<p class="ft-fragment step">American vs European: can vs cannot be exercised before maturity</p>
+                                <p class="ft-fragment step">CBOE: Chicago Board Options Exchange</p>
+				<p class="ft-fragment step">1 stock option for 100 shares</p>
+				<p class="ft-fragment step">Predefined maturities and strike prices for a variety of securities</p>
+				<p class="ft-fragment step"><tt>SPX 141122P00019500</tt></p>
+				<p class="ft-fragment step">Option chains</p>
+				<p class="ft-fragment step">In-the-money, at-the-money, out-of-the-money</p>
+			</div>
+			<div id="/section-2/page-3" class="ft-page" data-id="page-3">
+				<h1>Party roles</h1>
+				<div> 
+                                    <div class="ft-fragment step" style="float: left;width: 50%">
+                                        <p>Buyer of call</p>
+                                        <p>Seller of call</p>
+                                        <p>Buyer of put</p>
+                                        <p>Seller of put</p>
+                                    </div>
+                                    <div class="ft-fragment step" style="float: right;width: 50%">
+                                        <p>Long</p>
+                                        <p>Short</p>
+                                        <p>Long</p>
+                                        <p>Short</p>
+                                    </div>
+				</div>
+				<div >
+                                    <p class="ft-fragment step">Naked options: selling without having the same position in the underlier</p>
+                                    <p class="ft-fragment step">Sell a naked call: if it's exercised, the underlier will have to be bought at the market price at the exerise date. Potential for infinte loss.</p>
+                                    <p class="ft-fragment step">Sell a naked put: if it's exercised, the underlier could be sold at the market price at the exercise date. Potential for almost infinte loss.</p>
+                                    <p class="ft-fragment step">Put-call parity: puts and calls of the same class need to be worth the same</p>
+				</div>
+			</div>
+                </div>
+                <div class="ft-section" data-id="section-3">
+                    <div id="/section-3/page-1" class="ft-page" data-id="page-1">
+                    <div class="stack-center">
+                                <div class="stacked-center">
+                                        <p class="page-title">How do the different scenarios look like from a pay-off perspective?</p>
+                                        <img style="width: 300px" src="img/cash-changing-hands.jpg"/>
+                                </div>
+                        </div>
+                    </div>
+                    <div id="/section-3/page-1" class="ft-page" data-id="page-1">
+                            <h1>Buy a call</h1>
+                            <div class="stack-center">
+                                <div class="stacked-center">
+                                    <img class="ft-fragment" src="img/buy_call.png">
+                                </div>
+                            </div>
+                    </div>
+                    <div id="/section-3/page-2" class="ft-page" data-id="page-2">
+                            <h1>Sell a call</h1>
+                            <div class="stack-center">
+                                <div class="stacked-center">
+                                    <img class="ft-fragment" src="img/sell_call.png">
+                                </div>
+                            </div>
+                    </div>
+                    <div id="/section-3/page-3" class="ft-page" data-id="page-3">
+                            <h1>Buy a put</h1>
+                            <div class="stack-center">
+                                <div class="stacked-center">
+                                    <img class="ft-fragment" src="img/buy_put.png">
+                                </div>
+                            </div>
+                    </div>
+                    <div id="/section-3/page-4" class="ft-page" data-id="page-4">
+                            <h1>Sell a put</h1>
+                            <div class="stack-center">
+                                <div class="stacked-center">
+                                    <img class="ft-fragment" src="img/sell_put.png">
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="ft-section" data-id="section-4">
+                    <div id="/section-4/page-1" class="ft-page" data-id="page-1">
+                            <div class="stack-center">
+                                    <div class="stacked-center">
+                                            <p class="page-title">Greeks</p>
+                                            <img src="img/greek.png">
+                                    </div>
+                            </div>
+                    </div>
+                    <div id="/section-4/page-2" class="ft-page" data-id="page-2">
+                        <h1>Greeks</h1>
+                        <p class="ft-fragment step">Greeks are different dimensions of risk involved when entering an option trade</p>
+                        <p class="ft-fragment step">&Delta;: delta</p>
+                        <p class="ft-fragment step">&Theta;: theta</p>
+                        <p class="ft-fragment step">&Gamma;: gamma</p>
+                        <p class="ft-fragment step">&nu;: vega</p>
+                        <p class="ft-fragment step">&Rho;: rho</p>
+                    </div>
+                    <div id="/section-4/page-3" class="ft-page" data-id="page-3">
+                        <h1>&Delta;: delta</h1>
+                        <p class="ft-fragment step">The rate of change between the option's price and a $1 change in the underlier's price</p>
+                        <p class="ft-fragment step">Price sensitivity of the option relative to the underlier</p>
+                        <p class="ft-fragment step">0 &leq; &Delta;(call) &leq; 1</p>
+                        <p class="ft-fragment step">-1 &leq; &Delta;(put) &leq; 0</p>
+                        <p class="ft-fragment step">The probability that the option will expire ITM</p>
+                        <p class="ft-fragment step">Delta neutral portfolio: small changes in the underlier won't affect the delta of the portfolio (option + underlier)</p>
+                    </div>
+        
+                    <div id="/section-4/page-4" class="ft-page" data-id="page-4">
+                        <h1>&Theta;: theta</h1>
+                        <p class="ft-fragment step">The rate of change between the option's price and its time to maturity</p>
+                        <p class="ft-fragment step">Time sensitivity or time decay</p>
+                        <p class="ft-fragment step">The amount an option's price would decrease by as time to maturity decreases</p>
+                        <p class="ft-fragment step">0 &leq; &Theta;(long) usually</p>
+                        <p class="ft-fragment step">0 &geq; &Theta;(short) usually</p>
+                    </div>
+        
+                    <div id="/section-4/page-5" class="ft-page" data-id="page-5">
+                        <h1>&Gamma;: gamma</h1>
+                        <p class="ft-fragment step">The rate of change between the option's delta and its underlier's price</p>
+                        <p class="ft-fragment step">&Delta;'</p>
+                        <p class="ft-fragment step">The stability of an option's delta</p>
+                        <p class="ft-fragment step">A high gamma value means that delta can significantly change for even small underlier price changes</p>
+                    </div>
+        
+                    <div id="/section-4/page-6" class="ft-page" data-id="page-6">
+                        <h1>&nu;: vega</h1>
+                        <p class="ft-fragment step">The rate of change between the option's price and the underlier's implied volatility</p>
+                        <p class="ft-fragment step">Implied vol: the probability of change in the security's market price (as the market views it)</p>
+                        <p class="ft-fragment step">The possiblity of price changes of the underlier directly affects the option's price</p>
+                    </div>
+        
+                    <div id="/section-4/page-7" class="ft-page" data-id="page-7">
+                        <h1>&Rho;: rho</h1>
+                        <p class="ft-fragment step">The rate of change between the option's price and a 1% change in interest rate</p>
+                        <p class="ft-fragment step">Interest rates affect economy and the markets directly (e.g. investment willingness), in turn this 
+                        affects volatility, so it affects option prices</p>
+                    </div>
+            </div>
+            <div class="ft-section" data-id="section-5">
+                <div id="/section-5/page-1" class="ft-page" data-id="page-1">
+                        <div class="stack-center">
+                                <div class="stacked-center">
+                                        <p class="page-title">Option trading strategies</p>
+                                        <img style="width: 500px;" src="img/strat.jpg">
+                                </div>
+                        </div>
+                </div>
+                <div id="/section-5/page-2" class="ft-page" data-id="page-2">
+                        <h1>Principal-protected note</h1>
+                        <p class="ft-fragment step">A zero-coupon bond and a call option at the same value</p>
+                        <p class="ft-fragment step">Guarantees that the investor will receive at least the investment</p>
+                        <p class="ft-fragment step">If the strike price is less than the stock price at maturity, the option won't be exercised but bond covers the call option's price</p>
+                        <p class="ft-fragment step">If the strike price is higher, the investor receives the option's gain + the bond's principal</p>
+                </div>
+                <div id="/section-5/page-3" class="ft-page" data-id="page-3">
+                        <h1>An option plus its underlier</h1>
+                        <p class="ft-fragment step">Covered call options (call option + long on the underlier)</p>
+                        <p class="ft-fragment step">Protective put (put option + short on the underlier)</p>
+                </div>
+                <div id="/section-5/page-4" class="ft-page" data-id="page-4">
+                        <h1>Spreads</h1>
+                        <p class="ft-fragment step">2+ option of the same type (put or call)</p>
+                        <p class="ft-fragment step">Bull spread: buy and sell the puts or calls with same underlier and maturity, but different strike prices: short call strike &gt; long call strike or short put strike &lt; long put strike</p>
+                        <p class="ft-fragment step">Bear spread: inverse of the bull spread (strike price)</p>
+                        <p class="ft-fragment step">Box spread: bull call spread + bear put spread with identical strike prices. It will alwyas pay off the difference between the strike prices. Only works with European options.</p>
+                        <p class="ft-fragment step">Butterfly spreads, calendar spreads, Diagonal spreads, etc.</p>
+                </div>
+                <div id="/section-5/page-5" class="ft-page" data-id="page-5">
+                        <h1>Combinations</h1>
+                        <p class="ft-fragment step">Both calls and puts of the same stock</p>
+                        <p class="ft-fragment step">Straddle: call and put with the same strike and maturity: pay-off is proportional to the move in the underlier's price (either direction)</p>
+                        <p class="ft-fragment step">Strip: 1 long call + 2 long put: underlier price more likely to decrease</p>
+                        <p class="ft-fragment step">Strap: 1 long put + 2 long call: underlier price more likely to increase</p>
+                        <p class="ft-fragment step">Strangle: a put and a call with the same maturity but different strike prices: strike price differences determine if increase or decrease means more gains</p>
+                </div>
+            </div>
+            <div class="ft-section" data-id="section-6">
+                <div id="/section-6/page-1" class="ft-page" data-id="page-1">
+                        <div class="stack-center">
+                                <div class="stacked-center">
+                                        <p class="page-title">The Black-Scholes-Merton model</p>
+                                        <img style="width: 500px;" src="img/bsm.jpeg">
+                                </div>
+                        </div>
+                </div>
+                <div id="/section-6/page-2" class="ft-page" data-id="page-2">
+                        <h1>The Black-Scholes-Merton model</h1>
+                        <p class="ft-fragment step">A mathematical estimation for prices of options</p>
+                        <p class="ft-fragment step">Developed in 1973</p>
+                        <p class="ft-fragment step">Won Nobel prize in 1997</p>
+                        <p class="ft-fragment step">For European options (can be extended to American)</p>
+                        <p class="ft-fragment step">The goal is to have a portfolio with the underliers to elmininate risk</p>
+                        <p class="ft-fragment step">Continuously revised delta hedging</p>
+                </div>
+                <div id="/section-6/page-3" class="ft-page" data-id="page-3">
+                        <h1>Assumptions</h1>
+                        <div class="ft-fragment step">
+                            <p>On the assets:</p>
+                            <ul>
+                                <li>The return rate of the risk-free asset is constant (=interest rate)</li>
+                                <li>The returns on the risky asset follow a geometric Brownian motion</li>
+                                <li>The risky asset does not pay dividends during the option's lifetime</li>
+                            </ul>
+                        </div>
+                        <div class="ft-fragment step">
+                            <p>On the market:</p>
+                            <ul>
+                                <li>No arbitrage possible</li>
+                                <li>Can lend and borrow infinie amount of money at the risk-free rate</li>
+                                <li>The underlier has no limit to its selling (long and short)</li>
+                                <li>There are no transaction costs</li>
+                            </ul>
+                        </div>
+                </div>
+                <div id="/section-6/page-4" class="ft-page" data-id="page-4">
+                    <h1>The formulae</h1>
+                    <div class="ft-fragment step">
+                        <p>The differential equation</p>
+                        <img style="width:500px" src="img/BSM_diff.png"/>
+                    </div>
+                    <div class="ft-fragment step">
+                        <p>BSM formula</p>
+                        <img style="width:500px" src="img/bsm_f.png"/>
+                        <ul>
+                            <li>c = Call premium</li>
+                            <li>p = Put premium</li>
+                            <li>S = Spot price of underlying asset</li>
+                            <li>K = Exercise price</li>
+                            <li>r = Risk free rate of return</li>
+                            <li>T = Time remaining for expiration of option in years</li>
+                            <li>σ = Annualized standard deviation of returns expressed as decimal</li>
+                            <li>N = Normal distribution</li>
+                        </ul>
+                    </div>                
+                </div>
+                <div id="/section-6/page-5" class="ft-page" data-id="page-5">
+                    <h1>How does it work?</h1>
+                    <div class="ft-fragment step">
+                        <p>Two parts</p>
+                        <ul>
+                            <li>
+                                <p>The expected benefit of acquiring the stock outright</p>
+                                <p>The stock's price * change in the call premium as the unerlier's price changes</p>
+                            </li>
+                            <li>The present price of paying the excercise price at maturity</li>
+                        </ul>
+                    </div>
+                    <p class="ft-fragment step">Then calculate the difference between the two</p>
+                </div>
+                <div id="/section-6/page-6" class="ft-page" data-id="page-6">
+                    <h1>Visualized</h1>
+                    <div class="stack-center">
+                        <div class="stacked-center">
+                            <img style="width:700px" src="img/bsm_chart.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ft-section" data-id="section-7">
+                <div id="/section-7/page-1" class="ft-page" data-id="page-1">
+                    <div class="stack-center">
+                            <div class="stacked-center">
+                                    <p class="page-title">Volatility arbitrage</p>
+                                    <img style="width: 500px;" src="img/arb.png">
+                            </div>
+                    </div>
+                </div>
+                <div id="/section-7/page-2" class="ft-page" data-id="page-2">
+                    <h1>Vol Arb</h1>
+                    <p class="ft-fragment step">A statistical arbitrage strategy</p>
+                    <p class="ft-fragment step">Hedge funds like it</p>
+                    <p class="ft-fragment step">A lot of our clients apply it</p>
+                    <p class="ft-fragment step">Delta-neutral</p>
+                    <p class="ft-fragment step">The investor assumes they can forecast the realized vol of a security better than implied vol</p>
+                </div>
+                <div id="/section-7/page-3" class="ft-page" data-id="page-3">
+                    <h1>The strategy</h1>
+                    <p class="ft-fragment step">The investor uses options to bet on vol instead of price</p>
+                    <div class="ft-fragment step">
+                        <p>They need to have two factors</p>
+                        <ul>
+                            <li>The implied vol of the unerlier to calculate the option's price</li>
+                            <li>A ("better than the market's") forecast of the vol of the underlier</li>
+                    </div>
+                    <p class="ft-fragment step">If the diff is big enough, it's worth entering the vol arb</p>
+                    <p class="ft-fragment step">Buy the option: long on vol (realized vol will be higher than implied vol)</p>
+                    <p class="ft-fragment step">Write the option: short on vol (realized vol will be lower than implied vol)</p>
+                    <p class="ft-fragment step">Hedge the option with the underlier (so it's delta-neutral)</p>
+                    <p class="ft-fragment step">The investor realizes gains if the actual realized vol is closer to their forecast than to implied vol</p>
+                    <p class="ft-fragment step">The profit is realized continuously during re-hedging</p>
+                    <p class="ft-fragment step">Not a real arbitrage (no negative-cost cycle)</p>
+                </div>
+                <div id="/section-7/page-4" class="ft-page" data-id="page-4">
+                    <h1>Why is it so difficult for us?</h1>
+                    <p class="ft-fragment step">The client won't tell us how they implement it (they tell us the account at least)</p>
+                    <p class="ft-fragment step">The client won't tell us their vol predictions (that's their business model)</p>
+                    <p class="ft-fragment step">The strategy can work through mutliple steps (as long as it's delta-neutral)</p>
+                    <p class="ft-fragment step">Their vol prediction can be really bad => the portfolio can be risky</p>
+                    <p class="ft-fragment step">We absolutely have to make sure we charge enough according to our risk appetite and our vol prediction</p>
+                </div>
+            </div>
+            <div class="ft-section" data-id="section-8">
+                <div id="/section-8/page-1" class="ft-page" data-id="page-1">
+                    <h1>Quiz</h1>
+                    <div><p style="float:left;margin-bottom: 0px;width:47%" class="ft-fragment step">What's writing a put?</p><p style="float: right;margin-bottom: 0px;width:50%" class="ft-fragment step">Selling the right to sell the underlier.</p></div>
+                    <div style="clear: both"><p style="float:left;margin-bottom: 0px;margin-top:1em;width:47%" class="ft-fragment step">True or false? It's enough to price a call of a certain class.</p><p style="float: right;margin-bottom: 0px;margin-top:1em;width:50%" class="ft-fragment step">True due to put-call-parity.</p></div>
+                    <div style="clear: both"><p style="float:left;margin-bottom: 0px;margin-top:1em;width:47%" class="ft-fragment step">Which one's riskier? Selling a naked or a covered call?</p><p style="float: right;margin-bottom: 0px;margin-top:1em;width:50%" class="ft-fragment step">Naked.</p></div>
+                    <div style="clear: both"><p style="float:left;margin-bottom: 0px;margin-top:1em;width:47%" class="ft-fragment step">True or false? Buying a put has the potential for infinite loss.</p><p style="float: right;margin-bottom: 0px;margin-top:1em;width:50%" class="ft-fragment step">False, buying an option never holds infinite risk.</p></div>
+                    <div style="clear: both"><p style="float:left;margin-bottom: 0px;margin-top:1em;width:47%" class="ft-fragment step">Which greek predicts if the option is ITM?</p><p style="float: right;margin-bottom: 0px;margin-top:1em;width:50%" class="ft-fragment step">Delta.</p></div>
+                    <div style="clear: both"><p style="float:left;margin-bottom: 0px;margin-top:1em;width:47%" class="ft-fragment step">What's an option chain?</p><p style="float: right;margin-bottom: 0px;margin-top:1em;width:50%" class="ft-fragment step">Options of the same unerlier and maturity with different strike prices.</p></div>
+                    <div style="clear: both"><p style="float:left;margin-bottom: 0px;margin-top:1em;width:47%" class="ft-fragment step">True or false? In a straddle the strike prices are equal.</p><p style="float: right;margin-bottom: 0px;margin-top:1em;width:50%" class="ft-fragment step">True. The types are inverted.</p></div>
+                    <div style="clear: both"><p style="float:left;margin-bottom: 0px;margin-top:1em;width:47%" class="ft-fragment step">What's the original goal of the BSM model?</p><p style="float: right;margin-bottom: 0px;margin-top:1em;width:50%" class="ft-fragment step">To provide a way to have a portfolio with options and unerliers with minimal risk.</p></div>
+                    <div style="clear: both"><p style="float:left;margin-bottom: 0px;margin-top:1em;width:47%" class="ft-fragment step">True or false? The vol arb is delta-neutral.</p><p style="float: right;margin-bottom: 0px;margin-top:1em;width:50%" class="ft-fragment step">True, but it requires continuous re-hedging.</p></div>
+                </div>
+                <!--div id="/section-8/page-2" class="ft-page" data-id="page-2">
+                    <h1>Homework</h1>
+                    <p class="ft-fragment step"></p>
+                </div>
+            </div-->    
+                
+        </div>
+                
+
+<!-- 	<a href="https://github.com/marcolago/flowtime.js"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a> -->
+
+	<script src="js/brav1toolbox.js"></script>
+	<script src="js/flowtime.js"></script>
+	<!-- <script src="js/flowtime.min.js"></script> -->
+	<script src="assets/js/prism.js"></script>
+
+	<script type="text/javascript">
+		var cacheTitle = document.title.replace("Flowtime.js | ", "");
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-1228618-10']);
+		_gaq.push(['_trackPageview']);
+		_gaq.push(['_trackEvent', 'Flowtime', 'Landing', document.title]);
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+		// Configuration API test
+		Flowtime.showProgress(true);
+		// Flowtime.fragmentsOnSide(true);
+		// Flowtime.fragmentsOnBack(true);
+		// Flowtime.useHistory(false);
+		// Flowtime.slideInPx(true);
+		// Flowtime.sectionsSlideToTop(true);
+		// Flowtime.backFromPageToTop(true);
+		// Flowtime.gridNavigation(false);
+		// Flowtime.useOverviewVariant(true);
+		// Flowtime.parallaxInPx(true);
+		//
+		// event management
+		// Flowtime.addEventListener("flowtimenavigation", onNavigation, false);
+		Flowtime.onNavigation(onNavigation);
+		// starts the application with configuration options
+		Flowtime.start();
+	</script>
+</body>
+</html>
